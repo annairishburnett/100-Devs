@@ -1,0 +1,574 @@
+/* Box Model Hack */
+* {
+     box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+html{
+     font-size: 62.5%;
+}
+
+body{
+     background: rgb(245, 249, 252);
+}
+
+body *{
+     color: rgb(48, 70, 89);
+     text-decoration: none;
+     list-style: none;
+     font-size: 1.15rem;
+     line-height: 2rem;
+}
+
+.boldText{
+     font-weight: bold;
+}
+
+.allCapsText{
+     text-transform: uppercase;
+}
+
+.button{
+     padding: 6px 17px;
+     background: rgb(48, 70, 89);
+     color:  rgb(245, 249, 252);
+     font-weight: bold;
+     width: 65px;
+     height: 25px;
+     line-height: normal;
+}
+
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+/*Header*/
+
+header{
+     height: 60px;
+}
+
+header *{
+     float: left;
+     width: 15%;
+}
+
+.showSidebar{ 
+     display: none;
+}
+
+.sidebar{
+     display: none;
+}
+
+header nav{
+     width: 35%;
+}
+
+header nav *{
+     width: 100%;
+}
+
+header nav li{
+     width: 25%;
+}
+
+header h2{
+     font-size: 1.75rem;
+     margin: 20px 0 20px 3%;
+}
+
+header nav{
+     margin: 20px 18% 20px 15%;
+}
+
+header nav + a{
+     margin: 16px 3%;
+}
+
+/*Main - Source helps creators do more of what they love*/
+
+main{
+     height: 450px;
+     margin: 25px 0;
+}
+
+main > section{
+     float: left;
+     width: 50%;
+}
+
+main > section:first-of-type{
+     width: 25%;
+     margin: 50px 13% 0 12%;
+}
+
+main img{
+     max-width: 100%;
+}
+
+main span{
+     display: block;
+     color: rgb(139, 158, 176);
+     font-size: 1rem;
+     margin: 20px 0;
+}
+
+main h1{
+     font-size: 2.5rem;
+     line-height: 3.2rem;
+     margin-bottom: 20px;
+}
+
+.searchBar{
+     height: 26px;
+     margin: 5px 0;
+}
+
+.searchBar form, 
+.searchBar a{
+     float: left;
+}
+
+main form{
+     width: 73%;
+     height: 25px;
+}
+
+main form input{
+     width: 100%;
+     height: 25px;
+     background: rgb(225, 233, 240);
+     color: rgb(48, 70, 89);
+     border: none;
+}
+
+main p{
+     margin: 14px 0;
+     line-height: 2rem;
+}
+
+/*Section - Features 1-4*/
+
+.featuresSection{
+     height: 190px;
+     width: 80%;
+     margin: 20px 12%;
+}
+
+.featuresSection section{
+     float: left;
+     width: 25%;
+     padding: 0 20px;
+ }
+
+ .featuresSection img{
+     max-width: 20%;
+ }
+
+ .featuresSection h3{
+     padding: 5px 0;
+ }
+
+ .featuresSection a{
+     padding: 10px 0;
+     display: block;
+ }
+
+/*Section - Collecting Information*/
+
+.collectingInformationSection{
+     height: 705px;
+     background: #fff;
+     padding: 35px 12%;
+}
+
+.collectingInformationSection h2{
+     font-size: 3.5rem;
+     line-height: 4rem;
+     padding: 5px 40% 5px 0;
+}
+
+.collectingInformationSection p{
+     color: rgb(139, 158, 176);
+     padding: 5px 38% 5px 0;
+}
+
+.collectingInformationSection img{
+     max-width: 100%;
+     margin: 20px 0;
+}
+
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+
+/*Screen growing layouts*/
+
+@media (min-width: 977px){
+     .collectingInformationSection {
+          height: fit-content;
+      }
+}
+
+@media (min-width: 1181px){
+     main{
+          height: 475px;
+     }
+     .featuresSection{
+          height: 205px;
+     }
+
+}
+
+@media (min-width: 1271px){
+     main{
+          height: 505px;
+     }
+     main h1 {
+          font-size: 3rem;
+          line-height: 3.7rem;
+      }
+     /*Body styles*/
+     body p{
+          font-size: 1.5rem;
+     }
+     body h3{
+          font-size: 1.75rem;
+     }
+     body a{
+          font-size: 1.2rem; 
+     }
+     body input{
+          font-size: 1.2rem;
+     }
+}
+
+@media (min-width: 1431px){
+     main{
+          height: 565px;
+     }
+     main h1 {
+          font-size: 3.5rem;
+          line-height: 4rem;
+      }
+}
+
+@media (min-width: 1500px){
+     main{
+          height: 600px;
+     }
+     main h1 {
+          font-size: 3.75rem;
+          line-height: 4.2rem;
+      }
+}
+
+
+
+/*Screen Shrinking layouts*/
+
+@media screen and (max-width: 979px){
+     main form {
+          width: 55%;
+      }
+      main {
+          height: 400px;
+      }
+}
+
+@media screen and (max-width: 899px){
+     main > section:first-of-type {
+          margin: 25px 13% 0 12%;
+      }
+      main {
+          height: 370px;
+      }
+     .collectingInformationSection {
+          height: 677px;
+      }
+}
+
+@media screen and (max-width: 829px){
+     header nav + a {
+          margin: 16px 1%;
+      }
+     .collectingInformationSection {
+          height: 642px;
+      }
+}
+
+@media screen and (max-width: 812px){
+     header nav{
+          margin: 20px 15%;
+     }
+}
+
+
+
+@media screen and (max-width: 785px){
+     main > section:first-of-type {
+          margin: 0 8% 0 12%;
+          width: 30%;
+      }
+     main {
+          height: 320px;
+      }
+     header nav {
+          width: 52%;
+      }
+     header nav {
+          margin: 20px 8%;
+      }
+     .collectingInformationSection {
+          height: 620px;
+      }
+     .collectingInformationSection h2 {
+          font-size: 2.5rem;
+          line-height: 3rem;
+          padding-right: 30%;
+      }
+     .collectingInformationSection p {
+          padding-right: 18%;
+      }
+}
+
+
+@media screen and (max-width: 673px){
+     main > section:first-of-type {
+          margin: 0 8% 0 5%;
+          width: 37%;
+     }
+     main {
+          height: 295px;
+      }
+     main > section:last-of-type {
+          padding-top: 30px;
+      }
+     .featuresSection {
+          height: 200px;
+          width: 90%;
+          margin: 20px 5%;
+      }
+     .collectingInformationSection {
+          height: 593px;
+          padding: 30px 5%;
+      }
+}
+
+@media screen and (max-width: 600px){
+     .featuresSection {
+          height: 220px;
+      }
+}
+
+@media screen and (max-width: 558px){
+     header nav {
+          margin: 20px 6%;
+      }
+     header nav {
+          width: 48%;
+      }
+     main > section:last-of-type {
+          padding-top: 50px;
+      }
+     .featuresSection {
+          height: 240px;
+      }
+     .collectingInformationSection {
+          height: 526px;
+      }
+}
+
+/*Switching to all stacked content*/
+
+@media screen and (max-width: 529px){
+     main > section {
+          float: none;
+      }
+      main {
+          height: 500px;
+      }
+      main > section:first-of-type {
+          margin: 0 8% 0 5%;
+          width: 90%;
+      }
+      main > section:last-of-type {
+          width: 90%;
+          margin-left: 10%;
+          padding-top: 30px;
+      }
+     main form {
+          width: 25%;
+      }
+      main img {
+          max-width: 70%;
+          margin-left: 30%;
+      }
+     .featuresSection {
+          height: 260px;
+      }
+}
+
+
+/*Switching to Mobile Layout with a sidebar*/
+/*Sidebar display and hide code copied from: https://www.youtube.com/watch?v=U8smiWQ8Seg&t=488s&ab_channel=Coding2GO */
+
+@media screen and (max-width: 490px){
+     /*Body styles*/
+     body p{
+          font-size: 1.5rem;
+     }
+     body h3{
+          font-size: 1.75rem;
+     }
+     body a{
+          font-size: 1.2rem; 
+     }
+     body input{
+          font-size: 1.2rem;
+     }
+
+     /*Header*/
+     header{
+          height: 55px;
+          width: 100%;
+          border-bottom: 1px solid  rgb(139, 158, 176);
+          background-color: rgb(245, 249, 252);
+          margin-bottom: 10px;
+          display: block;
+          position: fixed;
+          top: 0;
+          right: 0;
+        }
+     header h2{
+          width: 80%;
+          margin: 20px 5% 20px 3%;
+          text-align: center;
+     }
+     header nav + a{
+          display: none;
+     }
+
+     /*NAVIGATION - .mainbar and .sidebar*/
+     .mainbar{
+          display: none;
+     }
+
+     /*Sidebar Styles*/
+     .showSidebar{ 
+          display: block;
+          width: 5%;
+          margin: 20px 2% 20px 5%;
+     }
+    
+     .sidebar{
+          position: fixed;
+          top: 0;
+          left: 0;
+          height: 100vh;
+          width: 250px;
+          margin: 0;
+          z-index: 999;
+          background-color: rgba(255, 255, 255, 0.814);
+          backdrop-filter: blur(10px);
+          box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+          display: none;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: flex-start;
+     }
+
+     .sidebar ul{
+          margin: 10px 30px;
+     }
+
+     .sidebar li,
+     .sidebar a{
+          width: 100%;
+     }
+
+     .sidebar a{
+          font-size: 1.75rem;
+          font-weight: bold;
+          padding: 10px 0;
+     }
+
+     /*MAIN*/
+     main {
+          height: 550px;
+          margin-top: 100px;
+     }
+
+     /*MAIN - Search bar and button*/
+     .searchBar{
+          height: 100px;
+          margin: 5px 0;
+     }
+     
+     .searchBar form, 
+     .searchBar a{
+          float: none;
+          display: block;
+     }
+     
+     main form,
+     .button{
+          width: 100%;
+          margin: 25px 0;
+     }
+
+     .button,
+     main form input{
+          height: 35px;
+     }
+
+     .button{
+          text-align: center;
+          font-size: 1.5rem;
+          padding: 10px 17px;
+     }
+
+     /*Features Section*/
+
+     .featuresSection{
+          height: 705px;
+          margin: 0 8% 0 5%;
+          width: 90%;
+     }
+     .featuresSection section{
+          float: none;
+          width: 100%;
+          padding: 10px 0;
+      }
+
+     .featuresSection img{
+          max-width: 10%;
+      }
+
+     /*Collecting information Section*/
+     .collectingInformationSection {
+          height: 487px;
+      }
+
+}
+

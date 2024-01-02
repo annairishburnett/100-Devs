@@ -1,0 +1,330 @@
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+html{
+ font-size: 62.5%;
+}
+
+body *{
+  font-family: "BBC Reith Sans", Helvetica, Arial, sans-serif;
+  text-decoration: none;
+  display: block;
+}
+
+.articleTag{
+  text-transform: uppercase;
+  margin: 5px 0 5px 5px;
+  padding-left: 5px;
+}
+
+.articleTagRed{
+  border-left: 2px solid red;
+}
+
+.articleTagBlue{
+  border-left: 2px solid blue;
+}
+
+.articleTagSmall{
+  font-size: 1rem;
+}
+
+.articleTagBig{
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: none;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+header{
+  height: 35px;
+  background-color: black;
+}
+
+header *{
+ float: left;
+ display: block;
+ width: 11%;
+ color: white;
+}
+
+header img{
+  width: 96.125px;
+  height: 28.828px;
+  margin: 2px .1%; 
+}
+
+header img + form{
+ margin: 7px 0.1%;
+}
+
+header img + form input{
+  width: 100%;
+}
+
+header nav + form {
+  width: 17%;
+}
+
+header nav + form input{
+  margin: 7px 1% 7px 9%;
+  width: 90%;
+}
+
+header nav{
+  width: 61%;
+}
+
+header nav ul,
+header nav ul li a{
+  width: 100%;
+}
+
+header nav a{
+  border-right: 1px solid grey;
+  padding: 11px 5px;
+  font-size: 1.15rem;
+  text-align: center;
+}
+
+header nav li:first-child{
+  border-left: 1px solid grey;
+}
+
+header nav li:last-child{
+  border-right: none;
+}
+
+/*MAIN*/
+
+main *{
+  display: block;
+  font-size: 1.15rem;
+  color: white; 
+}
+
+main{
+  margin: 20px 1%;
+  height: 350px;
+}
+
+main > h2,
+main > span,
+main > section,
+main section + section section{ 
+  float: left;
+}
+
+main > h2,
+main > span{
+  font-size: 2rem;
+  font-weight: bold;
+  color: black;
+  width: 50%;
+  margin-bottom: 10px;
+}
+
+main > span{
+  color: grey;
+  text-align: right;
+}
+
+main > section{
+  height: 300px;
+  width: 50%;
+}
+
+main span + section{
+  padding-right: 7px;
+}
+
+main section + section section{
+  width: 50%;
+  height: 150px;
+}
+
+main h1{
+  font-size: 2.25rem;
+  padding: 222px 5px 10px 5px;
+}
+
+main span + section p{
+  padding: 0 5px 10px 5px;
+}
+
+main span + section{
+  background: url("../img/background.png") 50% 50% no-repeat;
+  background-size: cover;
+  background-clip: content-box;
+}
+
+
+main section + section section:nth-child(1){
+  background: url("../img/flags.jpg") 50% 50% no-repeat;
+  background-size: cover;
+  background-clip: content-box;
+  padding: 0 0 4px 7px;
+}
+
+main section + section section:nth-child(2){
+  background: url("../img/vaccine.jpg") 50% 50% no-repeat;
+  background-size: cover;
+  background-clip: content-box;
+  padding: 0 0 4px 14px;
+}
+
+main section + section section:nth-child(3){
+  background: url("../img/productivity.jpg") 50% 50% no-repeat;
+  background-size: cover;
+  background-clip: content-box;
+  padding: 4px 0 0 7px;
+}
+
+main section + section section:nth-child(4){
+  background: url("../img/singer.jpg") 50% 50% no-repeat;
+  background-size: cover;
+  background-clip: content-box;
+  padding: 4px 0 0  14px;
+}
+
+main section + section section h3{
+  font-size: 1.25rem;
+  padding: 92px 0 5px 5px;
+}
+
+main section + section section:nth-child(3) h3,
+main section + section section:nth-child(4) h3{
+  padding-top: 105px;
+}
+
+/*SECTION - NEWS*/
+
+main + section{
+  margin: 20px 1%;
+  height: 320px;
+}
+
+main + section section{
+  float: left;
+  width: 33.3333%;
+  padding: 5px;
+}
+
+main + section h3{
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+main + section section:first-of-type{
+  padding-left: 0;
+}
+
+main + section section:last-of-type{
+  padding-right: 0;
+}
+
+main + section section:nth-of-type(2){
+  padding-left: 2.5px;
+  padding-right: 2.5px;
+}
+
+main + section section img{
+  width: 100%;
+} 
+
+.alignLeft{
+  margin-left: 0;
+}
+  
+main + section p{
+  font-size: 1.12rem;
+  margin-bottom: 10px;
+  padding-right: 40px;
+}
+
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+
+@media screen and (max-width: 909px) {
+  header nav + form {
+    width: 12%;
+  }
+  header nav{
+    width: 64%;
+  }
+  
+  /* header nav + form input{
+    margin: 7px 1% 7px 9%;
+    width: 90%;
+  } */
+}
+
+@media screen and (max-width: 763px) {
+  header nav{
+    width: 40%;
+  }
+  header nav *{
+    width: 100%;
+  }
+  header nav li{
+    width: 25%;
+  }
+  header nav ul li{
+    display: none;
+  }
+  header nav ul li:first-child,
+  header nav ul li:last-child,
+  header nav ul li:nth-child(2),
+  header nav ul li:nth-child(3){
+    display: block;
+  }
+  
+  header img{
+    margin-left: 10%;
+  }
+}
+
+@media screen and (max-width: 962px){
+  main h1 {
+    font-size: 2.25rem;
+    padding-top: 200px;
+}
+main section + section section:nth-child(3) h3, 
+main section + section section:nth-child(4) h3 {
+  padding-top: 95px;
+}
+}
+
+@media screen and (max-width: 601px){
+  main > section {
+    height: 300px;
+    width: 100%;
+    margin: 10px 0;
+}
+}

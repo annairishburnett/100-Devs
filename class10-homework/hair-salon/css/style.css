@@ -1,0 +1,534 @@
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+/* TYPOGRAPHY */
+html{
+  font-size: 62.5%;
+}
+
+body *{
+  color: black;
+  font-size: 1.2rem;
+  font-family: "Nanum Myeongjo", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.bold-font{
+  font-weight: bold;
+}
+
+h1{
+  font-size: 5rem;
+  line-height: 5.5rem;
+}
+
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+/* HEADER & FOOTER */
+
+.navigation{
+  height: 50px;
+  margin: 0 5%;
+}
+
+.navigation *{
+  float: left;
+  width: 10%;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.navigation .logo{
+  width: 25px;
+  margin: 13px 0;
+}
+
+.navigation h2{
+  width: 8%;
+  font-size: 1.75rem;
+  margin: 8px 5px;
+  text-align: left;
+}
+
+.navigation nav{
+  width: 60%;
+  margin: 15px 1%;
+}
+
+.navigation nav ul,
+.navigation nav a{
+  width: 100%;
+}
+
+.navigation nav li{
+  width: 16.6666%;
+}
+
+.navigation form{
+  width: 30px;
+  margin: 15px 0;
+}
+
+.navigation form img{
+  width: 15px;
+}
+
+.navigation input{
+  display: none;
+}
+
+.navigation .icon{
+  width: 15px;
+}
+
+.navigation .anchor-icon{
+  width: 30px;
+  margin: 15px 0;
+}
+
+.navigation .online-booking{
+  margin: 10px 0 10px 50px;
+}
+
+/* MAIN */
+
+main *{
+  color: #fff;
+}
+
+main{
+  height: 660px;
+  background: url(../img/hero-image-2.png) 50% 50% no-repeat;
+  background-size: cover;
+  margin-bottom: 40px;
+}
+
+.section-wrapper{
+  height: 870px;
+  margin: 0 1%;
+  padding: 160px 0 70px 0;
+}
+
+.section-wrapper section{
+  float: left;
+  width: 95%;
+}
+
+.column-3-4{
+  padding-left: 10%;
+}
+
+.section-wrapper .column-1-4{
+  width: 5%;
+  writing-mode: vertical-lr;
+}
+
+#hero h1{
+  padding-right: 70%;
+  margin: 20px 0;
+}
+
+.column-3-4 > span{
+  padding: 5px 0;
+}
+
+.discount-ad{
+  height: 215px;
+  width: 200px;
+  background: black;
+  color: #fff;
+  margin: 75px 0;
+  padding: 20px 0;
+}
+
+.discount-ad *{
+  margin: 0 15px 0 20px;
+}
+
+.discount-ad h4{
+  border-left: 3px solid #fff;
+  height: 40px;
+  line-height: 40px;
+  padding-left: 10px;
+  margin: 0 0 5px 0;
+}
+
+.discount-ad span{
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-left: 0;
+  margin-right: 5px;
+}
+
+.discount-ad p{
+  line-height: 3rem;
+}
+
+.discount-ad .button{
+  margin-left: 20px;
+}
+
+@media screen and (min-width: 1205px){
+  main{
+    height: 660px;
+    background: url(../img/hero-image-3.png) 50% 50% no-repeat;
+    background-size: cover;
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (min-width: 1405px){
+  main{
+    height: 760px;
+    margin-bottom: 50px;
+  }
+}
+
+/* SECTION: Services */
+
+#services{
+  height: 190px;
+  margin: 40px 20%;
+}
+
+.column-1-3{
+  float: left;
+  width: 33.3333%;
+}
+
+.column-1-3 *{
+  text-align: center;
+  display: block;
+  margin: 10px auto;
+}
+
+#services .column-1-3 img{
+  width: 50px;
+}
+
+.column-1-3 p{
+  font-size: 1rem;
+  line-height: 2rem;
+  text-transform: none;
+  padding: 0 10px;
+}
+
+/* SECTION: Make Your Own Momentum */
+
+#momentum{
+  background: rgb(243, 243, 245);
+  padding: 40px 0;
+  height: fit-content;
+}
+
+#momentum .container{
+  height: 190px;
+  margin: 0 20%;
+}
+
+#momentum .column-1-2{
+  float: left;
+  width: 50%;
+}
+
+#momentum h3{
+  font-size: 2rem;
+  line-height: 3rem;
+}
+
+.column-1-2 p{
+  font-size: 1rem;
+  line-height: 2rem;
+  text-transform: none;
+  margin: 20px 0;
+  padding-right: 15%;
+}
+
+.column-1-2 iframe{
+  width: 315px;
+  height: 220.5px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* SECTION: About Us */
+
+#about-us{
+  height: fit-content;
+  margin: 40px 20%;
+}
+
+#about-us .column-1-3 img{
+  max-width: 100%;
+  padding: 8px;
+}
+
+#about-us .button-bio-overlay .column-1-3 *{
+  margin: 0 auto;
+}
+
+/* ASIDE: Discount Ad */
+
+#discount-ad{
+  padding: 40px 0;
+  height: fit-content;
+  margin: 20px 20%;
+}
+
+#discount-ad .container{
+  background: rgb(243, 243, 245);
+  height: 270px;
+}
+
+#discount-ad .column-1-2{
+  float: left;
+  width: 50%;
+}
+
+#discount-ad .column-1-2:first-of-type{
+  margin: 70px 0;
+  padding-left: 70px;
+}
+
+#discount-ad .column-1-2 p{
+  font-size: 1.5rem;
+  line-height: 3rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding-right: 0;
+}
+
+#discount-ad .column-1-2 span{
+  font-size: 2.5rem;
+  padding-right: 5px;
+}
+
+#discount-ad a{
+  font-size: 1rem;
+}
+
+#discount-ad img{
+  width: 330.609px;
+  height: 269.984px;
+  display: block;
+  margin-left: auto;
+}
+
+#discount-ad .column-1-2:last-of-type{
+  overflow: hidden;
+}
+
+/* SECTION: Our Lookbook */
+
+#lookbook{
+  /* padding: 40px 0; */
+  height: fit-content;
+  margin: 20px 20%;
+  text-align: center;
+}
+
+#lookbook span{
+  display: block;
+  padding: 10px 0;
+}
+
+#lookbook h3{
+  font-size: 2rem;
+}
+
+#lookbook img{
+  max-width: 100%;
+  padding: 0 5px;
+}
+
+#lookbook .container{
+  height: fit-content;
+  margin-bottom: 40px;
+  /* padding-bottom: 20px; */
+  /* overflow: hidden; */
+}
+
+/* SECTION: Contact Us */
+#contact-us{
+  background: rgb(243, 243, 245);
+  height: 190px;
+}
+
+#contact-us .column-1-2{
+  float: left;
+  width: 50%;
+}
+
+#contact-us .container{
+  height: 190px;
+  margin: 20px 20%;
+  padding: 45px 0;
+}
+
+#contact-us h4{
+  font-size: 2rem;
+}
+
+#contact-us p{
+  font-size: 1.2rem;
+}
+
+#contact-us .column-1-2:last-of-type h4{
+  margin-bottom: 20px;
+}
+
+#contact-us span{
+  display: block;
+  margin-bottom: 3px;
+}
+
+/* FOOTER: Secondary Navigation */
+
+#footer.navigation *{
+  font-size: 1.2rem;
+}
+
+#footer.navigation .logo{
+  width: 20px;
+  margin: 15px 0;
+}
+
+#footer.navigation h2{
+  margin: 20px 5px;
+}
+
+#footer.navigation nav{
+  width: 50%;
+  margin: 19px 3.5%;
+}
+
+#footer.navigation .socials {
+  margin: 15px 0;
+  float: right;
+  width: 20%;
+}
+
+#footer .socials ul{
+  width: 100%;
+}
+
+#footer .socials li{
+  width: 20%;
+}
+
+#footer .socials a{
+  width: 100%;
+}
+
+#footer .socials img{
+  width: 20px;
+}
+
+
+
+/******************************************
+/* COMPONENTS
+/*******************************************/
+
+/* ANCHOR TAGS */
+
+/* BUTTONS */
+
+.button{
+  width: 130px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  display: block;
+  margin: 20px 0;
+}
+
+.button-white{
+  background: #fff;
+  color: black;
+}
+
+.button-black{
+  background: black;
+  color: #fff;
+}
+
+.button-biography{
+  width: 130px;
+  height: 45px;
+  line-height: 1.5rem;
+  margin: 0;
+  padding: 10px 0;
+  position: relative;
+  top: -40px;
+  z-index: 999;
+}
+
+.button-biography span{
+  color: #fff;
+  margin: 0 auto;
+  font-size: .75rem;
+}
+
+/* FORMS */
+
+/* LISTS */
+
+/* NAVS */
+
+/* TABLES */
+
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 1068px){
+  .column-1-2 iframe {
+    width: 293.7px;
+    height: 220.5px;
+    display: block;
+    margin: 0 auto;
+}
+}
+
+@media screen and (max-width: 1035px){
+  .navigation h2 {
+    font-size: 1.5rem;
+    margin: 10px 5px;
+}
+  .navigation nav {
+    width: 55%;
+    margin: 19px 1%;
+}
+  .navigation * {
+    font-size: 1.3rem;
+}
+}
