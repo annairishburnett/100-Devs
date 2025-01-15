@@ -253,7 +253,11 @@ main + section section:nth-of-type(2){
 }
 
 main + section section img{
+<<<<<<< HEAD
   width: 100%;
+=======
+  max-width: 100%;
+>>>>>>> a58b6abc6ea4fb724d9e9ddbd7f61830a0fb89bc
 } 
 
 .alignLeft{
@@ -263,7 +267,10 @@ main + section section img{
 main + section p{
   font-size: 1.12rem;
   margin-bottom: 10px;
+<<<<<<< HEAD
   padding-right: 40px;
+=======
+>>>>>>> a58b6abc6ea4fb724d9e9ddbd7f61830a0fb89bc
 }
 
 
