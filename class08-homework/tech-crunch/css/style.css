@@ -1,0 +1,402 @@
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+html{
+  font-size: 62.5%;
+}
+
+body *{ 
+  font-family: "Helvetica Neue", Helvetica, Arial,sans-serif;
+  font-size: 1.5rem;
+}
+
+body{
+  padding: 10px;
+  line-height: normal;
+}
+
+.boldText{
+  font-weight: bold;
+}
+
+.maxBoldText{
+  font-weight: 900;
+  line-height: 2.5rem;
+}
+
+.extraLargeText{
+  font-size: 2.5rem;
+}
+
+.largeText{
+  font-size: 2rem;
+}
+
+.mediumText{
+  font-size: 1.25rem;
+}
+
+.smallText{
+  font-size: 1rem;
+}
+
+.COLOR_ORANGE{
+  color: rgb(246, 166, 31);
+}
+
+.COLOR_GREY{
+  color: rgb(143, 143, 143);
+}
+
+.imageMaxWidth{
+  max-width: 100%;
+}
+
+.displayBlock{
+  display: block;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+ 
+header,
+main,
+aside{
+  float: left;
+  width: 12%;
+  height: 400px;
+  background: white;
+  color: black;
+  padding: 10px 5px;
+}
+
+.sidebar{
+  display: none;
+}
+
+/*TC HEADER/NAV */
+
+header * {
+  display: block;
+}
+
+header{
+  height: fit-content;
+  display: block;
+}
+
+header span{
+  display: none;
+}
+
+header img{
+  max-width: 50%;
+  margin: 0 20px 10px 0;
+}
+
+header img + a,
+header img + a + a{
+  padding: 5px 0;
+}
+
+header input{
+  max-width: 100%;
+  border: none;
+  padding: 0;
+  background-color: none;
+  margin: 25px 0 5px 0;
+}
+
+header nav ul{
+  list-style: none;
+}
+
+header a{
+  text-decoration: none;
+}
+
+header nav li{
+  padding: 5px 0;
+}
+
+header nav li:last-child{
+  padding-top: 15px;
+}
+
+
+/*MAIN*/
+main{
+  width: 58%;
+  padding: 5px 25px 5px 10px;
+  height: fit-content;
+}
+
+main *{
+  display: block;
+  margin-bottom: 8px;
+}
+
+
+
+/*ASIDE*/
+aside{
+  width: 30%;
+  height: fit-content;
+  padding-bottom: 0;
+}
+
+aside li{
+  padding: 10px 0 5px 0;
+  border-bottom: 1px solid rgb(241, 241, 241);
+}
+
+aside li:first-child{
+  padding-top: 0;
+}
+
+aside li:last-child{
+  border-bottom: none;
+}
+
+aside h3{
+  padding-bottom: 8px;
+}
+
+
+/*"The Latest" SECTION*/
+aside + section{
+  height: 300px;
+  float: left;
+  width: 87%;
+  margin: 15px 0 10px 13%;
+}
+
+aside + section section{
+  float: left;
+  width: 33.3333%;
+  padding-right: 50px;
+}
+
+aside + section section:last-child{
+  padding-right: 10px;
+}
+
+aside + section h3{
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgb(241, 241, 241);
+  margin-bottom: 20px;
+}
+
+aside + section h2{
+  margin-bottom: 10px;
+}
+
+aside + section p{
+  line-height: 2rem;
+}
+
+
+
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+
+
+@media (min-width: 1400px) {
+  body{
+    padding: 10px 10%;
+  }
+}
+
+@media (min-width: 1600px) {
+  body{
+    padding: 10px 15%;
+  }
+}
+
+@media screen and (max-width: 1108px) {
+  aside h3{
+    font-size: 1.5rem !important;
+    line-height: normal !important;
+  }
+}
+
+@media screen and (max-width: 890px) {
+  aside h3{
+    font-size: 1.25rem !important;
+    line-height: normal !important;
+  }
+  section h2{
+    font-size: 1.7rem !important;
+    line-height: 1.7rem !important;
+  }
+  main{
+    padding: 5px 15px 5px 5px;
+  }
+}
+
+@media (min-width: 717px) and (max-width: 833px) {
+  /* aside + section{
+    width: 85%;
+    margin: 15px 5px !important;
+  } */
+  header{
+    width: 16%;
+    height: 600px;
+  }
+  aside{
+    width: 26%;
+  } 
+  aside li:last-child{
+    display: none;
+  }
+  aside + section{
+    width: 81%;
+    margin: 15px 5px !important;
+  }
+} 
+
+@media screen and (max-width: 716px) {
+  aside{
+    display: none;
+  }
+  main{
+    width: 82%;
+    padding: 5px;
+  }
+  header{
+    width: 16%;
+  }
+  aside + section{
+    width: 81%;
+    margin: 15px 0 10px 17%;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  aside + section section{
+    width: 100%;
+  }
+  header{
+    width: 16%;
+    height: 900px;
+  }
+  aside + section{
+    width: 81%;
+    margin: 15px 5px !important;
+  }
+  section > section span{
+    padding-bottom: 10px;
+  }
+  section section p{
+    margin: 10px 0;
+  }
+}
+
+@media screen and (max-width: 659px) {
+  header{
+    width: 20%;
+    height: 900px;
+  }
+  main{
+    width: 75%;
+  }
+  aside + section{
+    width: 75%;
+    margin: 15px 5px !important;
+  }
+}
+
+
+/*Sidebar display and hide code copied from: https://www.youtube.com/watch?v=U8smiWQ8Seg&t=488s&ab_channel=Coding2GO */
+@media screen and (max-width: 455px) {
+  .mainbar{
+    display: none;
+  }
+  header,
+  main, 
+  aside + section{
+    width: 98%;
+  }
+  header{
+    height: 50px;
+    border-bottom: 1px solid rgb(241, 241, 241);
+    margin-bottom: 10px;
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+  }
+  header img{
+    display: block;
+    float: left;
+    max-width: 15%;
+  }
+
+  main{
+    margin-top: 60px;
+  }
+
+  span.showSidebar,
+  span.hideSidebar{
+    display: block;
+  }
+
+  header span.showSidebar{
+    max-width: 25%;
+    display: block;
+    position: fixed;
+    top: 2%;
+    right: 2%;
+  }
+
+  main h1{
+    font-size: 2rem !important;
+  }
+
+  .sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 135px;
+    z-index: 999;
+    background-color: rgba(255, 255, 255, 0.788);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+  }
+
+  header nav.sidebar{
+    padding: 15px 5px 0 15px;
+  }
+
+  header nav.sidebar > a{
+    padding-bottom: 10px;
+  }
+
+}
+
+

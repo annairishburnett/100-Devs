@@ -1,0 +1,571 @@
+/* Box Model Hack */
+* {
+     box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body *{
+     color: black;
+     font-size: 1.2rem;
+     font-family: 'Comfortaa', cursive, "Source Sans Pro", sans-serif;
+     text-decoration: none;
+     list-style-type: none;
+}
+
+
+/* TYPOGRAPHY */
+
+html{
+     font-size: 62.5%;
+}
+
+h1, h2, h3{
+     font-family: 'Yeseva One', cursive, "Source Sans Pro", sans-serif;
+}
+
+h1, h3{
+     font-size: 4rem;
+     line-height: 5.3rem;
+}
+
+h2{
+     font-size: 3rem;
+     line-height: 3.5rem;
+}
+
+p{
+     font-size: 1.2rem;
+     line-height: 2rem;
+}
+
+.orangeFont{
+     color: rgba(255,136,0);
+}
+
+.greyFont{
+     color: rgb(159, 159, 169);
+}
+
+.boldFont{
+     font-weight: 800;
+}
+
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+/* HEADER */
+
+.hero header{
+     height: 50px;
+     margin: 0 3% 20px 3%;
+}
+
+header *{
+     float: left;
+     display: block;
+     width: 12%;
+}
+
+.hero .logo{
+     height: 50px;
+     width: 50px;
+}
+
+/* MAIN: Welcome To Our Cuisine Restaurant */
+
+.hero {
+     height: 550px;
+     background: url(../img/brooke-lark-08bOYnH_r_E-unsplash.jpg) 50% 0% no-repeat;
+     background-size: cover;
+}
+
+.hero .primarySection{
+     height: 330px;
+     width: 50%;
+     margin: 70px 1% 100px 3%;
+}
+
+.hero h1{
+     padding-right: 35%;
+}
+
+/* MAIN: Social Media Links UL */
+.primarySection form,
+.primarySection a{
+     float: left;
+}
+
+.primarySection ul{
+     width: 60%; 
+     height: 40px;
+     margin: 15px 0;
+}
+
+.primarySection li{
+     float: left;
+     width: 23%;
+}
+
+.primarySection li:nth-child(odd){
+     width: 5%;
+}
+
+.primarySection li:nth-child(even){
+     padding: 5px;
+}
+
+.primarySection ul a{
+     width: 100%;
+}
+
+
+/* SECTION: Discover Our Restaurant Story */
+
+#aboutUs section{
+     height: 550px; 
+     width: 40%;
+     float: left;
+}
+
+#aboutUs img{
+     height: 550px;
+}
+
+#aboutUs .backgroundImage{
+     background: url(../img/olga-kudriavtseva-s8J1DlRroo0-unsplash.jpg) 100% 100% no-repeat;
+     background-size: contain;
+     width: 60%;
+}
+
+#aboutUs .backgroundImage .contentContainer{
+     width: 70%;
+     margin: 0 1% 0 1%;
+     padding: 70px 0;
+}
+
+.contentContainer h4{
+     padding: 5px 0;
+}
+
+#aboutUs p{
+     padding: 15px 0;
+}
+
+#aboutUs .contentContainer a{
+     width: 130px;
+     height: 40px;
+     display: block;
+     margin: 15px 0;
+     padding: 14px 0;
+     border-radius: 5px;
+     text-align: center;
+}
+
+
+/* SECTION: Our Specialty Cuisine */
+
+#specialtyCuisine{
+     height: fit-content;
+     background: rgb(242, 246, 247);
+     padding: 70px 5%;
+}
+
+#specialtyCuisine span,
+#specialtyCuisine h3,
+#specialtyCuisine ul{
+     display: block;
+     text-align: center;
+}
+
+#specialtyCuisine h3{
+     margin: 10px 0 30px 0;
+}
+
+.gridHeading ul{
+     width: 40%;
+     height: 20px;
+     margin: 20px auto;
+}
+
+.gridHeading ul *{
+     float: left;
+     width: 20%;
+     margin: 0 auto;
+}
+
+.gridHeading li{
+     border-bottom: 2px solid rgb(219, 222, 223);
+     padding-bottom: 10px;
+}
+     .gridHeading li:first-of-type{
+          border-bottom: 2px solid rgb(255,136,0);
+     }
+
+
+.gridHeading li:hover{
+     border-bottom: 2px solid rgba(255,136,0);
+     padding-bottom: 10px;
+}
+
+#specialtyCuisine h4,
+#specialtyCuisine a{
+     width: 100%;
+     margin: 0 auto;
+}
+
+     #specialtyCuisine .button{
+          width: 38%;
+          text-align: center;
+     }
+
+
+.gridWrapper{
+     margin: 20px 0;
+}
+
+.row-1-4{
+     float: left;
+     width: 25%;
+     height: 100%;
+     padding: 20px;
+}
+
+.hidden{
+     display: none;
+}
+
+.imageOverlay{
+     background: rgba(5, 5, 5, 0.451);
+     height: 100%;
+     position: relative;
+     z-index: 999;
+}
+
+.sectionOverlay{
+     position: absolute;
+     top: -21px;
+     width: 100%;
+     height: 100%;
+}
+
+.menuItemImg img{
+     position: relative;
+     z-index: 3;
+}
+
+.overlayWrapper{
+     position: relative;
+}
+
+#specialtyCuisine img{
+     max-width: 100%;
+}
+.imageOverlay li.boldFont,
+.imageOverlay h5{
+     color: #fff;
+     font-size: 3rem;
+}
+
+.imageOverlay ul{
+     padding: 55px 10px;
+} 
+.imageOverlay li{
+     padding: 5px 0 5px 0;
+     font-size: 3rem;
+}
+
+.imageOverlay li:last-of-type{
+     padding: 25px 0 5px 0;
+}
+
+@media screen and (min-width: 1444px){
+     .imageOverlay ul{
+          padding: 70px 30px;
+     } 
+}
+
+@media screen and (min-width: 1580px){
+     .imageOverlay ul{
+          padding: 90px 40px;
+     } 
+}
+
+@media screen and (min-width: 1700px){
+     .imageOverlay ul {
+          padding: 150px 40px;
+      }     
+}
+
+@media screen and (max-width: 1240px){
+     .imageOverlay ul{
+          padding: 48px 30px;
+     } 
+     #specialtyCuisine .button {
+          width: 52%;
+     }
+     .imageOverlay li.boldFont, .imageOverlay h5 {
+          font-size: 2.5rem;
+     }
+     .imageOverlay li {
+          font-size: 2.5rem;
+     }
+}
+
+@media screen and (max-width: 1145px){
+     .imageOverlay ul{
+          padding: 40px 30px;
+     } 
+     #specialtyCuisine .button {
+          width: 57%;
+     }
+     .imageOverlay li.boldFont, .imageOverlay h5 {
+          font-size: 2rem;
+     }
+}
+
+@media screen and (max-width: 1082px){
+     .imageOverlay ul{
+          padding: 35px 30px;
+     } 
+     #specialtyCuisine .button {
+          width: 62%;
+     }
+     .imageOverlay li.boldFont, .imageOverlay h5 {
+          font-size: 2rem;
+     }
+     .imageOverlay li {
+          font-size: 2rem;
+     }
+}
+
+@media screen and (max-width: 1032px){
+     .imageOverlay ul{
+          padding: 40px 30px;
+     } 
+     #specialtyCuisine .button {
+          width: 67%;
+     }
+     .imageOverlay li.boldFont, .imageOverlay h5 {
+          font-size: 1.5rem;
+     }
+     .imageOverlay li {
+          font-size: 1.5rem;
+     }
+}
+
+
+
+/* SECTION: Opening Hours */
+
+#openingHours{
+     background: url(../img/vanesa-giaconi-n1nwTr_-lH4-unsplash.jpg) 50% 50% no-repeat;
+     
+     background-size: cover;
+     height: fit-content;
+     padding: 70px 0;
+}
+
+#openingHours *{
+     display: block;
+     text-align: center;
+}
+
+#openingHours span{ 
+     padding: 10px 0;
+}
+
+#openingHours img,
+#openingHours iframe{
+     margin: 20px auto;
+}
+
+#openingHours img{
+     width: 40px;
+}
+
+#openingHours h3{
+     margin-bottom: 30px;
+}
+
+#openingHours h5 + span{
+     font-size: 2.5rem;
+     font-family: 'Yeseva One', cursive, "Source Sans Pro", sans-serif;
+}
+
+.sectionWrapper{
+     width: 50%;
+     margin: 15px 25% 0 25%;
+}
+.row-1-2{
+     float: left;
+     width: 50%;
+}
+
+.sectionWrapper span{
+     font-family: 'Yeseva One', cursive, "Source Sans Pro", sans-serif;
+     font-size: 1.5rem;
+}
+
+/* SECTION: Testimonials */
+
+#testimonials{
+     background: url(../img/quotation-background.jpg) 50% 50% no-repeat;
+     background-size: cover;
+     height: fit-content;
+     padding: 70px 0;
+}
+
+#testimonials *{
+     text-align: center;
+     display: block;
+}
+
+#testimonials img{
+     height: 80px;
+     border-radius: 50%;
+     margin: 20px auto;
+}
+
+.customer{
+     font-size: 2rem;
+     margin: 10px 0;
+}
+
+.reviewStars{
+     margin: 15px 0;
+}
+
+#testimonials p{
+     width: 60%;
+     margin: 0 20%;
+}
+
+/******************************************
+/* COMPONENTS
+/*******************************************/
+
+/* ANCHOR TAGS */
+
+a:hover{
+     color: rgba(255,136,0);
+}
+
+a.button:hover{
+     color: #fff;
+     font-weight: bold;
+}
+
+/* BUTTONS */
+
+.button{
+     height: 30px;
+     width: 75px;
+     padding: 9px 6px;
+     background: rgba(255,136,0);
+     color: #fff;
+     border: none;
+     border-radius: 3px;
+     margin: 15px 0;
+     display: block;
+}
+
+     .button.searchBar{
+          border-radius: 0 3px 3px 0; 
+     }
+
+/* FORMS */
+header form{
+     width: 5%;
+     margin: 20px 1%;
+}
+
+header input{
+     display: none;
+}
+
+.primarySection form,
+.primarySection input{
+     height: 30px;
+}
+
+.primarySection form{
+     width: 55%;
+     margin: 15px 0;
+}
+
+.primarySection input{
+     width: 100%;
+     border: 1px solid rgb(217, 220, 232);
+     border-right: none;
+     border-radius: 3% 0% 0% 3%;
+}
+
+
+/* ICONS */
+
+.hero .icon{
+     height: 25px;
+     width: 25px;
+     margin: 15px 1%;
+}
+
+.primarySection .icon{
+     height: 15px;
+     width: 15px;
+     margin: 0;
+}
+
+/* NAVS */
+
+.mainNavigation{
+     width: 48%;
+     margin: 20px 1% 20px 33%;
+}
+
+.mainNavigation *{
+     width: 100%;
+}
+
+.mainNavigation li{
+     width: 16.6666%;
+}
+
+.mainNavigation a{
+     text-align: center;
+}
+
+
+
+/******************************************
+/* IMAGES
+/*******************************************/
+
+
+
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+
+
+
+
