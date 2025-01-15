@@ -253,7 +253,15 @@ main + section section:nth-of-type(2){
 }
 
 main + section section img{
+<<<<<<< HEAD
   width: 100%;
+=======
+<<<<<<< HEAD
+  width: 100%;
+=======
+  max-width: 100%;
+>>>>>>> a58b6abc6ea4fb724d9e9ddbd7f61830a0fb89bc
+>>>>>>> 7b17bbf7e94f286a34bb98e575a77261692d78d1
 } 
 
 .alignLeft{
@@ -263,7 +271,14 @@ main + section section img{
 main + section p{
   font-size: 1.12rem;
   margin-bottom: 10px;
+<<<<<<< HEAD
   padding-right: 40px;
+=======
+<<<<<<< HEAD
+  padding-right: 40px;
+=======
+>>>>>>> a58b6abc6ea4fb724d9e9ddbd7f61830a0fb89bc
+>>>>>>> 7b17bbf7e94f286a34bb98e575a77261692d78d1
 }
 
 
