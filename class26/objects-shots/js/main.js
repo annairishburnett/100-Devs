@@ -6,8 +6,10 @@ document.querySelector('#getCocktail').addEventListener('click', getDrink)
 function getDrink() {
     const drink = document.querySelector('input').value;
 
-    //push homework, make it cycle through the drinks
+
     //try to get it to work with drinks that have spaces in their names (not using template literal)
+    //ALSO try to get the NASA API to work
+    //push homework, make it cycle through the drinks
     fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${drink}`)
     .then(res => res.json()) // parse response as JSON
     .then(data => {
