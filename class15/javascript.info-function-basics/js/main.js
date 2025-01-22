@@ -1,242 +1,151 @@
-//Jesse's problem
-//$0.47 for max of range (80%), $0 for min of range (73%), gradient for rest of range
-//difference between min and max is 7
-//gradient from 0 - 7 that aligns with the original array
-//number from previous gradient divided by 7 * $0.47
-
-// function range(min, max, increment = 1){
-//     let array = [];
-//     for(let i = min; i <= max; i += increment){
-//         array.push(Number(i.toFixed(2))); //this isn't working properly - only one decimal, if you take off the Number() constructor function it turns into a string
-//     }
-//     return array
-// }
-
-// console.log(range(73,80,.1));
+//JAVASCRIPT.INFO: FUNCTION BASICS - TASKS
 
 
-// function calculateBonus(array){
+// Is "else" required?
+
+// The following function returns true if the parameter age is greater than 18.
+
+// Otherwise it asks for a confirmation and returns its result:
+
+function checkAge(age) {
+  if (age > 18) {
+    return true;
+  } else {
+    // ...
+    return confirm('Did parents allow you?');
+  }
+}
+
+// Will the function work differently if else is removed?
+//No, it will still work the same. 
+
+
+
+
+function checkAge(age) {
+  if (age > 18) {
+    return true;
+  }
+  // ...
+  return confirm('Did parents allow you?');
+}
+
+// Is there any difference in the behavior of these two variants?
+
+//No, they behave the same way. If age is greater than 18, they both return true, if no, they both ask you to confirm "Did parents allow you?"
+
+
+
+
+
+
+
+
+
+// Rewrite the function using '?' or '||'
+
+// The following function returns true if the parameter age is greater than 18.
+
+// Otherwise it asks for a confirmation and returns its result.
+
+function checkAge(age) {
+  if (age > 18) {
+    return true;
+  } else {
+    return confirm('Did parents allow you?');
+  }
+}
+// Rewrite it, to perform the same, but without if, in a single line.
+
+// Make two variants of checkAge:
+
+// Using a question mark operator ?
+
+const checkAge1 = age => age > 18 ? true : confirm('Did parents allow you?');
+
+// Using OR ||
+
+const checkAge2 = age => age > 18 || confirm('Did parents allow you?');
+
+
+
+
+
+
+
+
+// Function min(a, b)
+
+// Write a function min(a,b) which returns the least of two numbers a and b.
+
+// For instance:
+
+// min(2, 5) == 2
+// min(3, -1) == -1
+// min(1, 1) == 1
+
+
+function min(a,b){
+    //return Math.min(a,b);
+    //OR
+    if(a < b){
+        return a;
+    }else{
+        return b;
+    }
+}
+
+console.log(min(10,3));
+
+
+
+
+
+
+
+
+
+
+// Function pow(x,n)
+
+// Write a function pow(x,n) that returns x in power n. Or, in other words, multiplies x by itself n times and returns the result.
+
+// pow(3, 2) = 3 * 3 = 9
+// pow(3, 3) = 3 * 3 * 3 = 27
+// pow(1, 100) = 1 * 1 * ...* 1 = 1
+// Create a web-page that prompts for x and n, and then shows the result of pow(x,n).
+
+// Run the demo
+
+// P.S. In this task the function should support only natural values of n: integers up from 1.
+
+
+function pow(x,n){
+    //return Math.pow(x,n);
+    //OR
+    let result = x;
+    for(let i = 1; i < n; i++){
+        result *= x;
+    }
+    return result;
+}
+
+console.log(pow(3,2)); //9
+
+
+
+
+
+function pow2(){
+    let x = prompt('Enter a number for x:')
+    let n = prompt('Enter a number for n:')
+    let result = x;
     
-// }
+    for(let i = 1; i < n; i++){
+        result *= x;
+    }
 
-// console.log(calculateBonus(range(73,80,.1)));
+    console.log(result);
+}
 
-
-
-
-// function sum(array) {
-//     return array.reduce((total, num) => total + num, 0);
-// }
-
-// console.log((sum(range(71,80,.1))));
-
-
-
-
-
-// let sentence = ['Loose', 'enough', 'to', 'move', 'freely', 'but', 'tight', 'enough', 'to', 'never', 'let', 'you', 'go'];
-
-// function smash(arr){
-  
-// }
-
-// console.log(smash(sentence));
-
-
-
-
-// let arr = [5,3,8,1];
-
-
-
-// filterRangeInPlace(arr, 1,4);
-
-// console.log(arr);
-
-
-
-
-// let arr = [5,3,8,1];
-
-
-// let filtered = filterRange(arr, 1,4);
-
-// console.log(filtered);
-// console.log(arr);
-
-
-
-
-
-
-// let john = { name: "John", surname: "Smith", id: 1};
-// let pete = { name: "Pete", surname: "Hunt", id: 2};
-// let mary = { name: "Mary", surname: "Key", id: 3};
-
-// let users = [john, pete, mary];
-
-// let usersMapped = 
-
-// console.log(usersMapped[0].id); // 1
-// console.log(usersMapped[0].fullName); // John Smith
-
-
-
-
-
-
-
-
-// let john = { name: "John", age: 25 };
-// let pete = { name: "Pete", age: 30 };
-// let mary = { name: "Mary", age: 28 };
-
-// let arr = [ pete, john, mary ];
-
-
-
-// sortByAge(arr);
-
-// console.log(arr[0].name); //John
-// console.log(arr[1].name); //Mary
-// console.log(arr[2].name); //Pete
-
-
-
-
-
-// let john = { name: "John", age: 25 };
-// let pete = { name: "Pete", age: 30 };
-// let mary = { name: "Mary", age: 28 };
-
-// let users = [ john, pete, mary ];
-
-// let names = 
-
-// console.log(names);
-
-
-
-
-
-// let arr = [1,2,3,4];
-
-
-
-// console.log(shuffle(arr));
-// console.log(shuffle(arr));
-// console.log(shuffle(arr));
-// console.log(shuffle(arr));
-
-
-
-
-
-// let john = { name: "John", age: 25 };
-// let pete = { name: "Pete", age: 30 };
-// let mary = { name: "Mary", age: 28 };
-
-// let arr = [ john, pete, mary ];
-
-
-
-// console.log(getAverageAge(arr));
-
-
-
-// function unique(arr) {
-  
-// }
-
-// let strings = ['Hare', 'Krishna', 'Hare', 'Krishna', 'Krishna', 'Krishna', 'Hare', 'Hare', ':-O'];
-
-// console.log(unique(strings)); // Hare, Krishna, :-O
-
-
-
-
-// let users = [
-//   {id: 'john', name: "John Smith", age: 20 },
-//   {id: 'ann', name: "Ann Smith", age: 24 },
-//   {id: 'pete', name: "Pete Peterson", age: 31 },
-// ];
-
-// const groupByID
-
-// let usersById = groupById(users);
-
-// console.log(usersById);
-
-
-
-
-
-
-
-// let string = 'Hi';
-
-
-
-// console.log(removeChar(string));
-
-
-
-
-
-
-// Complete the solution so that it reverses all of the words within the string passed in.
-// Words are separated by exactly one space and there are no leading or trailing spaces.
-
-// Example(Input --> Output):
-
-// "The greatest victory is that which requires no battle" --> "battle no requires which that is victory greatest The"
-
-
-// let string = "The greatest victory is that which requires no battle";
-
-
-
-// console.log(reverse(string));
-
-
-
-
-
-
-// let scores = ["3:1", "2:2", "0:1", "4:1", "2:0", "3:1", "2:2", "0:1", "4:1", "2:0"];
-
-// function teamScore(games){
-
-// }
-
-// console.log(teamScore(scores)); // 20
-
-
-
-
-
-
-// let string = 'HELLO THERE';
-
-
-
-// console.log(string.isUpperCase());
-
-
-
-
-
-// Create a function that accepts a string and a single character, and returns an integer of the count of occurrences the 2nd argument is found in the first one.
-
-// If no occurrences can be found, a count of 0 should be returned.
-
-// ("Hello", 'o')  =>  1
-// ("Hello", 'l')  =>  2
-// ("", 'z')       =>  0
-// Notes
-// The first argument can be an empty string
-// In languages with no distinct character data type, the second argument will be a string of length 1
-
-
-
-
+pow2(); 
