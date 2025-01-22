@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    	<meta charset="utf-8">
+    	<meta name="description" content="This is where your description goes">
+    	<meta name="keywords" content="one, two, three">
+
+		<title>Yooper Temperature Converter</title>
+
+		<!-- external CSS link -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+		<div class="flexContainer">
+			<main>
+				<img src="img/up-outline.webp" alt="outline of the Upper Peninsula of Michigan">
+				<h1>YOOPER TEMPERATURE CONVERTER</h1>
+				<h4>Is it cold outside?</h4>
+				<section class="flexContainer">
+					<form id="celsiusForm">
+						<label for="celsiusTemp">Celsius:</label>
+						<input id="celsiusTemp" type="text" placeholder="Temperature">
+					</form>
+					<button id="makeFahrenheit">Fahrenheit</button>
+				</section>
+				<section class="flexContainer">
+					<form id="fahrenheitForm">
+						<label for="fahrenheitTemp">Fahrenheit:</label>
+						<input id="fahrenheitTemp" type="text" placeholder="Temperature">
+					</form>
+					
+					<button id="makeCelsius">Celsius</button>
+				</section>
+				<button id="reset">Reset</button>
+				<h2 id="convertedTemperature"></h2>
+				<h3 id="hotOrCold"></h3>
+			</main>
+		</div>
+		<footer>
+			<span>Photo by <a href="https://unsplash.com/@robincanfield?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Robin Canfield</a> on <a href="https://unsplash.com/photos/people-on-beach-during-daytime-ImTHzmnhndA?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+			</span>
+		</footer>
+
+		<script type="text/javascript" src="js/main.js"></script>
+	</body>
+</html>

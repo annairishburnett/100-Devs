@@ -1,0 +1,98 @@
+/******************************************
+/* CSS
+/*******************************************/
+
+/* Box Model Hack */
+*{
+  box-sizing: border-box;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background: url('../img/presqueisle.webp') no-repeat;
+  background-size: cover;
+  font-family: "Work Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+  height: 100vh;
+}
+
+.flexContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+div.flexContainer {
+  height: 750px;
+} 
+
+main {
+  background: rgba(255, 255, 255, 0.855);
+  width: 40%;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+main *{
+  text-align: center;
+}
+
+img {
+  width: 90px;
+  margin: 0 auto;
+}
+
+h1, h2, h3, h4,
+section.flexContainer {
+  padding: 10px 0;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2, h3 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+h4, form * {
+  font-size: 1.5rem;
+}
+
+button#reset {
+  width: 50px;
+  margin: 10px auto;
+}
+
+footer {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+}
+
+footer * {
+  color: black;
+  font-size: 1rem;
+}
+
+a:hover {
+  color: rgb(232, 232, 218);
+}
+
+
+
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
