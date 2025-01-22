@@ -9,4 +9,10 @@ function yellFullName() {
   const fullName = `${firstName} ${firstMiddle} ${lastMiddle} ${lastName}`
 
   document.querySelector('#placeToYell').innerHTML = fullName
+
+  document.querySelector('body').style.backgroundImage = "url(img/dynamic-wang-cD-_fbY6yww-unsplash.webp"
+  document.querySelector('body').style.backgroundSize = "cover"
+  document.querySelector('body').style.color = 'black'
+  document.querySelector('h1').style.color = 'red'
 }
+
