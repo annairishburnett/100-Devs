@@ -11,6 +11,26 @@
 // When it's done, improve it so that the number of turns is given by the user.
 
 
+let count = 1;
+
+while(count <= 10){
+    console.log(`Turn number: ${count}`);
+    count++
+}
+
+
+for(let i = 1; i <= 10; i++){
+    console.log(`Carousel turn number: ${i}`);
+}
+
+
+function carousel(turns){
+    for(let i = 1; i <= turns; i++){
+        console.log(`Carousel turns: ${i}`);
+    } 
+}
+
+carousel(15);
 
 
 
@@ -41,6 +61,32 @@ console.log(20 % 3); // 2 because 20 = 3 * 6 + 2
 // This program must show exactly 10 numbers including the first one, not 11 numbers!
 
 
+for(let i = 1; i <= 10; i++){
+    if(i % 2 === 0){
+      console.log(`${i} is even`);
+    }else{
+        console.log(`${i} is odd`)
+    }
+}
+
+
+function evenOrOdd(n){
+    for(let i = n; i < n + 10; i++){
+        if(i % 2 === 0){
+          console.log(`Exactly 10: ${i} is even`);
+        }else{
+            console.log(`Exactly 10: ${i} is odd`)
+        }
+    }
+}
+
+evenOrOdd(5);
+
+
+
+
+
+
 
 
 
@@ -52,6 +98,26 @@ console.log(20 % 3); // 2 because 20 = 3 * 6 + 2
 
 // When you are done with the above, improve the program so that the terminating number is between 50 and 100.
 
+
+
+function lessThanOrEqual100(){
+    let num = Number(prompt('Enter a number:'));
+
+    while(num > 100){
+        num = Number(prompt('Enter a number:'));
+    }
+}
+lessThanOrEqual100();
+
+
+function between50And100(){
+    let num = Number(prompt('Enter a number between 50 and 100:'));
+
+    while(num < 50 || num > 100){
+        num = Number(prompt('Enter a number between 50 and 100:'));
+    }
+}
+between50And100();
 
 
 
