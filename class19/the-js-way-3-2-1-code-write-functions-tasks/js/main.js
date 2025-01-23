@@ -200,6 +200,33 @@ console.log(number2); // Should show 5
 // Write a program that accepts a day name from the user, then shows the name of the following day. Incorrect inputs must be taken into account.
 
 
+function followingDay(){
+    let day = prompt('Enter a day of the week to get the following day:').toLowerCase();
+
+    while((day !== 'monday') && (day !== 'tuesday') && (day !== 'wednesday') && (day !== 'thursday') && (day !== 'friday') && (day !== 'saturday') && (day !== 'sunday')){
+        day = prompt('Enter a day of the week to get the following day:').toLowerCase();
+    }
+
+    if(day === 'monday'){
+        alert('Tuesday');
+    }else if(day === 'tuesday'){
+        alert('Wednesday')
+    }else if(day === 'wednesday'){
+        alert('Thursday')
+    }else if(day === 'thursday'){
+        alert('Friday')
+    }else if(day === 'friday'){
+        alert('Saturday')
+    }else if(day === 'saturday'){
+        alert('Sunday')
+    }else if(day === 'sunday'){
+        alert('Monday')
+    }
+}
+
+followingDay();
+
+
 
 
 
@@ -210,8 +237,17 @@ console.log(number2); // Should show 5
 
 
 
+function twoNums(n1, n2){
+    if(n1 > n2){
+        console.log(`${n1} is greater than ${n2}`);
+    }else if(n2 > n1){
+        console.log(`${n2} is greater than ${n1}`);
+    }else{
+        console.log(`${n1} equals ${n2}`);
+    }
+}
 
-
+twoNums(5,8);
 
 
 
@@ -244,13 +280,29 @@ if (nb1 > nb2) {
 console.log(nb1, nb2, nb3);
 // Before executing it, try to guess the final values of variables nb1, nb2 and nb3 depending on their initial values. Complete the following table.
 
-// Initial values	nb1 final value	nb2 final value	nb3 final value
-// nb1=nb2=nb3=4			
-// nb1=4,nb2=3,nb3=2			
-// nb1=2,nb2=4,nb3=0			
+// Initial values:			
+// nb1=nb2=nb3=4
+// nb1=4, nb2=3, nb3=2
+// nb1=2, nb2=4, nb3=0
+
+
+//Answers:
+// nb1=nb2=nb3=4	
+        //nb1 final value = 0
+        // nb2 final value = 4
+        // nb3 final value = 12
+
+// nb1=4, nb2=3, nb3=2
+        //nb1 final value = 4
+        // nb2 final value = 3
+        // nb3 final value = 2
+
+// nb1=2, nb2=4, nb3=0	
+        //nb1 final value = 3
+        // nb2 final value = 4 
+        // nb3 final value = 0
+
 // Check your predictions by executing the program.
-
-
 
 
 
@@ -265,7 +317,22 @@ console.log(nb1, nb2, nb3);
 // Write a program that accepts a month number (between 1 and 12), then shows the number of days of that month. Leap years are excluded. Incorrect inputs must be taken into account.
 
 
+function getDaysInMonth(month) {
+    if (month < 1 || month > 12 || isNaN(month)) {
+        return "Invalid month. Please enter a number between 1 and 12.";
+    }
 
+    const daysInMonth = {
+        1: 31, 2: 28, 3: 31, 4: 30, 5: 31, 6: 30, 
+        7: 31, 8: 31, 9: 30, 10: 31, 11: 30, 12: 31
+    };
+
+    return `Month ${month} has ${daysInMonth[month]} days.`;
+}
+
+// Example usage
+const input = parseInt(prompt("Enter a month number (1-12):"));
+console.log(getDaysInMonth(input));
 
 
 
@@ -284,14 +351,43 @@ console.log(nb1, nb2, nb3);
 
 
 
+function followingSecond() {
+    let hours = Number(prompt("Please enter hours (0-23):"));
+    let minutes = Number(prompt("Please enter minutes (0-59):"));
+    let seconds = Number(prompt("Please enter seconds (0-59):"));
+
+    // Validate input
+    if (isNaN(hours) || isNaN(minutes) || isNaN(seconds) || 
+        hours < 0 || hours > 23 || 
+        minutes < 0 || minutes > 59 || 
+        seconds < 0 || seconds > 59) {
+        console.log('You entered an incorrect time.');
+        return;
+    }
+
+    // Increment the time by one second
+    seconds++;
+    if (seconds === 60) {
+        seconds = 0;
+        minutes++;
+        if (minutes === 60) {
+            minutes = 0;
+            hours++;
+            if (hours === 24) {
+                hours = 0; // wrap around to midnight
+            }
+        }
+    }
+
+    console.log(`The time one second after is ${hours}hrs ${minutes}mins ${seconds}secs`);
+}
+
+followingSecond();
 
 
 
 
 
-
-
-//DON'T FORGET TO DO CHAPTER 5 QUESTIONS AT THE END OF THE DOCUMENT
 
 
 
@@ -521,7 +617,15 @@ function sayHello(firstName, lastName) {
 
 // TODO: ask user for first and last name
 // TODO: call sayHello() and show its result
+function sayHello(){
+    let firstName = prompt('Enter your first name:');
+    let lastName = prompt('Enter your last name:');
 
+    const message = `Hello, ${firstName} ${lastName}!`;
+    return message;
+}
+
+sayHello();
 
 
 
@@ -530,20 +634,16 @@ function sayHello(firstName, lastName) {
 
 // Square the given number x
 function square1(x) {
-  // TODO: complete the function code
+  return x ** 2;
 }
 
-
-
-
-
-
+console.log(square1(3));//9
 
 
 
 
 // Square the given number x
-const square2 = x => // TODO: complete the function code
+const square2 = x => x ** 2;
 
 console.log(square1(0)); // Must show 0
 console.log(square1(2)); // Must show 4
@@ -557,6 +657,9 @@ console.log(square2(5)); // Must show 25
 
 
 
+for(let i = 0; i <= 10; i++){
+    console.log(`${i} squared = ${i **2}`)
+}
 
 
 
@@ -565,7 +668,15 @@ console.log(square2(5)); // Must show 25
 // Minimum of two numbers
 // Let's pretend the JavaScript Math.min() function doesn’t exist. Complete the following program so that the min() function returns the minimum of its two received numbers.
 
-// TODO: write the min() function
+function min(n1, n2){
+    if(n1 < n2){
+        return n1;
+    }else if(n2 < n1){
+        return n2;
+    }else{
+        return n1;
+    }
+}
 
 console.log(min(4.5, 5)); // Must show 4.5
 console.log(min(19, 9));  // Must show 9
@@ -580,6 +691,21 @@ console.log(min(1, 1));   // Must show 1
 // Complete the following program so that it offers the four basic arithmetical operations: addition, subtraction, multiplication and division. You can use either a function declaration or a function expression.
 
 // TODO: complete program
+
+function calculate(n1, operation, n2) {
+    if (operation === "+") {
+        return n1 + n2;
+    } else if (operation === "-") {
+        return n1 - n2;
+    } else if (operation === "*") {
+        return n1 * n2;
+    } else if (operation === "/") {
+        return n2 !== 0 ? n1 / n2 : Infinity;
+    } else {
+        return "Invalid operation";
+    }
+}
+
 
 console.log(calculate(4, "+", 6));  // Must show 10
 console.log(calculate(4, "-", 6));  // Must show -2
@@ -596,9 +722,36 @@ console.log(calculate(12, "/", 0)); // Must show Infinity
 // Write a program containing two functions to calculate the circumference and area of a circle defined by its radius. Test it using user input.
 
 // Here are some tips for solving this exercise:
+        // Circumference and area calculation formulas should be part of your secondary school memories... Or a Google click away :)
+        // The value of number π (Pi) is obtained with Math.PI in JavaScript.
+        // You might want to use the exponentiation operator ** to perform computations.
+        console.log(2 ** 3); // 8: 2 * 2 * 2
+        console.log(3 ** 2); // 9: 3 * 3
 
-// Circumference and area calculation formulas should be part of your secondary school memories... Or a Google click away :)
-// The value of number π (Pi) is obtained with Math.PI in JavaScript.
-// You might want to use the exponentiation operator ** to perform computations.
-console.log(2 ** 3); // 8: 2 * 2 * 2
-console.log(3 ** 2); // 9: 3 * 3
+
+// Function to calculate the circumference of a circle
+function calculateCircumference(radius) {
+    return 2 * Math.PI * radius;
+}
+
+// Function to calculate the area of a circle
+function calculateArea(radius) {
+    return Math.PI * (radius ** 2);
+}
+
+// Function to prompt user for radius and calculate both circumference and area
+function calculateCircumferenceAndArea(){
+    const radius = Number(prompt("Enter the radius of the circle:"));
+    
+    if(isNaN(radius) || radius <= 0){
+        console.log("Please enter a valid positive number for the radius.");
+    }else{
+        const circumference = calculateCircumference(radius);
+        const area = calculateArea(radius);
+
+        console.log(`Circumference of the circle: ${circumference}`);
+        console.log(`Area of the circle: ${area}`);
+    }
+}
+
+calculateCircumferenceAndArea();

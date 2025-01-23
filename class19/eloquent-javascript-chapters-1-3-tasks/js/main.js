@@ -1,7 +1,6 @@
 //NOTE: ELOQUENT JAVASCRIPT Chapter 1 does not have any coding tasks
 
 
-
 //ELOQUENT JAVASCRIPT
 //Chapter 2: Program Structure
 //https://eloquentjavascript.net/3rd_edition/02_program_structure.html
@@ -31,17 +30,13 @@ console.log(abc.length);
 
 
 
-
-
-
-
-
-
-
-
-
-
-
+for(let i = 0; i < 7; i++){
+  let str = '';
+  for(let j = 0; j <= i; j++){
+    str += '#';
+  }
+  console.log(str);
+}
 
 
 
@@ -75,10 +70,6 @@ fizzBuzz();
 
 
 
-
-
-
-
 // Chessboard
 // Write a program that creates a string that represents an 8×8 grid, using newline characters to separate lines. At each position of the grid there is either a space or a "#" character. The characters should form a chessboard.
 
@@ -96,10 +87,21 @@ fizzBuzz();
 
 
 
+let size = 8;
+let board = '';
 
+for(let row = 0; row < size; row++){
+  for(let col = 0; col < size; col++){
+    if((row + col) % 2 === 0){
+      board += ' ';
+    }else{
+      board += '#';
+    }
+  }
+  board += '\n';
+}
 
-
-
+console.log(board);
 
 
 
@@ -122,16 +124,14 @@ fizzBuzz();
 
 // Your code here.
 
+function min(n1,n2){
+  return Math.min(n1, n2)
+}
+
 console.log(min(0, 10));
 // → 0
 console.log(min(0, -10));
 // → -10
-
-
-
-
-
-
 
 
 
@@ -147,19 +147,25 @@ console.log(min(0, -10));
 // Define a recursive function isEven corresponding to this description. The function should accept a single parameter (a positive, whole number) and return a Boolean.
 
 // Test it on 50 and 75. See how it behaves on -1. Why? Can you think of a way to fix this?
+//For -1 got error: "Maximum call stack size exceeded". -1 it would continue to call the recursive function over and over again because the number would never equal 0 or 1, but rather an increasingly small negative number. Make it an absolute value?
 
 // Your code here.
 
-console.log(isEven(50));
-// → true
-console.log(isEven(75));
-// → false
-console.log(isEven(-1));
-// → ??
+function isEven(num){
+  if(num === 0){
+    return true;
+  }else if(num === 1){
+    return false;
+  }else{
+    return isEven(Math.abs(num - 2));//Yes! Making it an absolute value worked! 
+  }
+}
 
 
 
-
+console.log(isEven(50));// → true
+console.log(isEven(75));// → false
+console.log(isEven(-1));// → ??
 
 
 
@@ -175,6 +181,33 @@ console.log(isEven(-1));
 // Next, write a function called countChar that behaves like countBs, except it takes a second argument that indicates the character that is to be counted (rather than counting only uppercase “B” characters). Rewrite countBs to make use of this new function.
 
 // Your code here.
+
+
+function countBs(str){
+  let count = 0;
+  let arr = str.toLowerCase().split('');
+
+  for(let char of arr){
+     if(char === 'b'){
+        count++
+      }
+  }
+  return count;
+}
+
+
+
+function countChar(str, letter){
+  let count = 0;
+  let arr = str.toLowerCase().split('');
+
+  for(let char of arr){
+    if(char === letter){
+      count++
+    }
+  }
+  return count;
+}
 
 console.log(countBs("BBC"));
 // → 2
