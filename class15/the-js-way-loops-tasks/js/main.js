@@ -1,4 +1,6 @@
-//THE JS WAY: LOOPS - TASKS
+//THE JS WAY
+//CHAPTER 4 - Repeat statements (LOOPS)
+//https://github.com/thejsway/thejsway/blob/master/manuscript/chapter04.md
 
 // Try to code each exercise twice, once with a while loop and the other with a for, to see for yourself which one is the most appropriate.
 
