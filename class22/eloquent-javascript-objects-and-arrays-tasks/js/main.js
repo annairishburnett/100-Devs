@@ -1,4 +1,8 @@
-//What chapter?????????
+//ELOQUENT JAVASCRIPT
+//Data Structures: Objects and Arrays
+//https://eloquentjavascript.net/04_data.html
+
+//EXERCISES
 
 
 // The sum of a range

@@ -1,3 +1,11 @@
+//THE JS WAY
+//CHAPTER 6 - OBJECTS
+//https://github.com/thejsway/thejsway/blob/master/manuscript/chapter06.md
+
+
+
+
+
 // Adding character experience
 // Improve our example RPG program to add an experience property named xp to the character. Its initial value is 0. Experience must appear in character description.
 
