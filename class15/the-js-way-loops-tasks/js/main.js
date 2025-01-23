@@ -7,7 +7,6 @@
 
 // Carousel
 // Write a program that launches a carousel for 10 turns, showing the turn number each time.
-
 // When it's done, improve it so that the number of turns is given by the user.
 
 
@@ -95,7 +94,6 @@ evenOrOdd(5);
 
 // Input validation
 // Write a program that continues to ask the user for a number until the entered number is less than or equal to 100.
-
 // When you are done with the above, improve the program so that the terminating number is between 50 and 100.
 
 
@@ -127,17 +125,37 @@ between50And100();
 
 // Multiplication table
 // Write a program that asks the user for a number, then shows the multiplication table for this number.
-
 // When you are done, improve the program so it only accepts numbers between 2 and 9 (use the previous exercise as a blueprint).
 
 
 
 
+function multiplicationTableForX(){
+    let x = Number(prompt('Enter a number:'));
+
+    console.log(`Multiplication Table for ${x}:`);
+    for(let i = 1; i <= 10; i++){
+        console.log(`${i} x ${x} = ${i * x}`)
+    }
+}
+multiplicationTableForX();
 
 
 
+function multiplicationTableForNum(){
+    let num = Number(prompt('Enter a number between 2 and 9:'));
 
-
+    
+    if(num > 1 && num < 10){
+        console.log(`Multiplication Table for ${num}:`);
+        for(let i = 1; i <= 10; i++){
+            console.log(`${i} x ${num} = ${i * num}`)
+        }
+    }else{
+        console.log('invalid input');
+    }
+}
+multiplicationTableForNum(2);
 
 
 
@@ -148,7 +166,16 @@ between50And100();
 
 
 
+function yesOrNo(){
+    let input = prompt('Enter a word:').toLowerCase();
 
+    while(input !== 'yes' && input !== 'no'){
+            input = prompt('Enter a word. \'Yes\' or \'No\' ends the game:').toLowerCase();
+        }
+}
+
+
+yesOrNo();
 
 
 
@@ -160,9 +187,24 @@ between50And100();
 
 // FizzBuzz
 // Write a program that shows all numbers between 1 and 100 with the following exceptions:
-
 // It shows "Fizz" instead if the number is divisible by 3.
-
 // It shows "Buzz" instead if the number is divisible by 5 and not by 3.
-
 // When it's done, improve it so that the program shows "FizzBuzz" instead for numbers divisible both by 3 and by 5.
+
+
+
+function fizzBuzz(){
+    for(let i = 1; i <= 100; i++){
+        if((i % 3 === 0) && (i % 5 === 0)){
+            console.log('FizzBuzz');
+        }else if(i % 3 === 0){
+            console.log('Fizz');
+        }else if(i % 5 === 0){
+            console.log('Buzz');
+        }else{
+            console.log(i);
+        }
+    }
+}
+
+fizzBuzz();
