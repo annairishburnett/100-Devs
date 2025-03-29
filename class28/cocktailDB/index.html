@@ -7,22 +7,53 @@
 
 		<title>Title in the tab</title>
 
+		<!-- Google Font Links -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Boldonse&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
 		<!-- external CSS link -->
 		<link rel="stylesheet" href="css/normalize.css">
 		<link rel="stylesheet" href="css/style.css">
 	</head>
 	<body>
+		
+		<main class="flexContainer">
+			<h1 class="boldonse-regular">Which Cocktail?</h1>
+			<section class="button">
+				<input type="text" name="drinkName" value="">
 
-		<h1>Which Cocktail?</h1>
-		<section class="button">
-			<input type="text" name="drinkName" value="">
-			<button id="getCocktail" type="button" name="button">Get Cocktail</button>
-		</section>
+				<button id="getCocktail" type="button" name="button">Get Cocktails</button>
 
-		<h2>Name</h2>
-		<img src="" alt="">
-		<h3>Instructions</h3>
-		<p></p>
+				<div class="center">
+					<button id="previousCocktail" type="button" name="button">Previous Cocktail</button>
+					<button id="nextCocktail" type="button" name="button">Next Cocktail</button>
+				</div>
+			</section>
+
+			<h2 class="boldonse-regular">Name</h2>
+			<img src="" alt="">
+			<h3 class="boldonse-regular">Ingredients</h3>
+			<ul>
+				<li id="ingredient1"></li>
+				<li id="ingredient2"></li>
+				<li id="ingredient3"></li>
+				<li id="ingredient4"></li>
+				<li id="ingredient5"></li>
+				<li id="ingredient6"></li>
+				<li id="ingredient7"></li>
+				<li id="ingredient8"></li>
+				<li id="ingredient9"></li>
+				<li id="ingredient10"></li>
+			</ul>
+			<h4 class="boldonse-regular">Instructions</h4>
+			<div class="center">
+				<button id="english">English</button>
+				<button id="espanol">Español</button>
+			</div>
+			<p id="instructions"></p>
+
+		</main>
 
 		<script type="text/javascript" src="js/main.js"></script>
 	</body>
