@@ -1,5 +1,6 @@
 //JAVASCRIPT.INFO: OBJECTS - TASKS
-//https://javascript.info/object-basics
+//https://javascript.info/object
+//Objects
 
 
 
@@ -58,14 +59,6 @@ console.log( isEmpty(schedule) ); // true
 schedule["8:30"] = "get up";
 
 console.log( isEmpty(schedule) ); // false
-
-
-
-
-
-
-
-
 
 
 
@@ -153,3 +146,133 @@ menu = {
 // Please note that multiplyNumeric does not need to return anything. It should modify the object in-place.
 
 // P.S. Use typeof to check for a number here.
+
+
+
+
+
+
+
+
+
+
+
+
+
+//JAVASCRIPT.INFO: OBJECTS - TASKS
+//https://javascript.info/object-copy
+//Object references and copying
+
+
+//No tasks for this section
+
+
+
+
+
+//JAVASCRIPT.INFO: OBJECTS - TASKS
+//https://javascript.info/garbage-collection
+//Garbage collection
+
+
+//No tasks for this section
+
+
+
+
+
+//JAVASCRIPT.INFO: OBJECTS - TASKS
+//https://javascript.info/object-methods
+//Object methods, "this"
+
+
+
+// Using "this" in object literal
+// importance: 5
+// Here the function makeUser returns an object.
+
+// What is the result of accessing its ref? Why?
+
+function makeUser() {
+  return {
+    name: "John",
+    ref: this
+  };
+}
+
+let user = makeUser();
+
+alert( user.ref.name ); // What's the result?
+
+
+
+
+
+
+
+
+
+// Create a calculator
+// importance: 5
+// Create an object calculator with three methods:
+
+// read() prompts for two values and saves them as object properties with names a and b respectively.
+// sum() returns the sum of saved values.
+// mul() multiplies saved values and returns the result.
+
+let calculator = {
+  // ... your code ...
+};
+
+calculator.read();
+alert( calculator.sum() );
+alert( calculator.mul() );
+
+
+
+
+
+
+
+
+
+
+// Chaining
+// importance: 2
+// There’s a ladder object that allows you to go up and down:
+
+let ladder = {
+  step: 0,
+  up() {
+    this.step++;
+  },
+  down() {
+    this.step--;
+  },
+  showStep: function() { // shows the current step
+    alert( this.step );
+  }
+};
+// Now, if we need to make several calls in sequence, we can do it like this:
+
+ladder.up();
+ladder.up();
+ladder.down();
+ladder.showStep(); // 1
+ladder.down();
+ladder.showStep(); // 0
+// Modify the code of up, down, and showStep to make the calls chainable, like this:
+
+ladder.up().up().down().showStep().down().showStep(); // shows 1 then 0
+// Such an approach is widely used across JavaScript libraries.
+
+
+
+
+
+//JAVASCRIPT.INFO: OBJECTS - TASKS
+//https://javascript.info/constructor-new
+//Constructor, operator "new"
+
+
+//There are tasks, add them :)
