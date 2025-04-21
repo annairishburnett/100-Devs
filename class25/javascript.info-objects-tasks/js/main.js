@@ -16,7 +16,16 @@
 
 
 
+let user = {
+  name: "John",
+  surname: "Smith",
+}
 
+user.name = "Pete";
+
+
+delete user.name;
+console.log(user.name);//undefined
 
 
 
@@ -28,18 +37,27 @@
 
 
 // Check for emptiness
-
+// importance: 5
 // Write the function isEmpty(obj) which returns true if the object has no properties, false otherwise.
 
 // Should work like that:
 
 let schedule = {};
 
-alert( isEmpty(schedule) ); // true
+function isEmpty(obj){
+  for (let key in obj) {
+    // if the loop has started, there is a property
+    return false;
+  }
+  return true;
+}
+
+
+console.log( isEmpty(schedule) ); // true
 
 schedule["8:30"] = "get up";
 
-alert( isEmpty(schedule) ); // false
+console.log( isEmpty(schedule) ); // false
 
 
 
@@ -73,14 +91,26 @@ let salaries = {
 // If salaries is empty, then the result must be 0.
 
 
+function calcSum(salaries){
+  let sum = 0;
+
+  for(let key in salaries){
+    sum += salaries[key];
+  }
+  return sum;
+}
 
 
+console.log(calcSum(salaries));//390
 
 
+//OR
 
 
-
-
+let sum = 0;
+for (let key in salaries) {
+  sum += salaries[key];
+}
 
 
 
@@ -91,7 +121,7 @@ let salaries = {
 
 
 // Multiply numeric property values by 2
-
+// importance: 3
 // Create a function multiplyNumeric(obj) that multiplies all numeric property values of obj by 2.
 
 // For instance:
@@ -103,7 +133,16 @@ let menu = {
   title: "My menu"
 };
 
-multiplyNumeric(menu);
+
+function multiplyNumeric(obj){
+  for(let key in obj){
+    if(typeof obj[key] === "number"){
+      obj[key] *= 2;
+    }
+  }
+}
+
+multiplyNumeric(menu);//returns nothing, check menu obj in console
 
 // after the call
 menu = {
