@@ -11,6 +11,14 @@
 // const url = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita'
 
 document.querySelector('#getCocktail').addEventListener('click', getCocktail);
+
+//Adds hitting "Enter" to initiate search functionality
+document.querySelector('input').addEventListener('keydown', function(event){
+    if(event.key === 'Enter'){
+        getCocktail();
+    }
+});
+
 //Buttons to create carousel of drinks
 document.querySelector('#nextCocktail').addEventListener('click', nextCocktail);
 document.querySelector('#previousCocktail').addEventListener('click', previousCocktail);
